@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: FX Meteor
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 1
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 0
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    packedHash:
+      serializedVersion: 2
+      Hash: 6029152d8eeafcb5fded08fc9e4d0d6f
+    variantMultiplier: 1
+    bindAsDefault: 1
+    finalFormat: 12
+    hashString: 6029152d8eeafcb5fded08fc9e4d0d6f
+    totalSpriteSurfaceArea: 85402
+    packables:
+    - {fileID: 102900000, guid: cc298163afb9ba2459ff9b8c2c8f7e62, type: 3}
+    packedSpriteRenderDataKeys:
+    - 9fc0a9f8123fa11488206023aef0bb8f: 21300000
+    - 6a80f49afb55fa7489035d6e927c3d1a: 21300000
+    - 63a43a355972496469cf5b1797d1330e: 21300000
+    - bfd50fcd67b0ece4fa3158e3b1247717: 21300000
+    - 3c1ba40102899ee4780c12892cd0694d: 21300000
+    - 0a7ae2b24933c7f47bdc18bc260b4fe3: 21300000
+    - 2480af2c4c189814594ed51ff4c5e47d: 21300000
+    - 7797b163603062346b58117dc67754ae: 21300000
+    - c7560cba9d06363438799f6e4f5cc824: 21300000
+    - 70c8ba88bcb159a4e9373a19055d931d: 21300000
+    - cc5f45329b2052c45ae21e8d95c10f07: 21300000
+    - b86cdbb383e07fb4081039c4f2fc7f2e: 21300000
+    - a5b5acf1ebcf5e549a35d8034694890b: 21300000
+    - b8c254ae5304bde4face83a8d3268d62: 21300000
+    - e065f9a1b31da7a448118b021dd75930: 21300000
+    - 2790fdc436643a54ca7a07331aa5e099: 21300000
+    - faf58bfbd1005714890970874ce7a5a9: 21300000
+    - bd5208ac38c695940b60af2de1f75ae7: 21300000
+    - 5572b707eb2bb6c428f775025f219ed5: 21300000
+    - 07d16365b1bd4ac4fa1bd61f467c7f6f: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 9fc0a9f8123fa11488206023aef0bb8f, type: 3}
+  - {fileID: 21300000, guid: 6a80f49afb55fa7489035d6e927c3d1a, type: 3}
+  - {fileID: 21300000, guid: 63a43a355972496469cf5b1797d1330e, type: 3}
+  - {fileID: 21300000, guid: bfd50fcd67b0ece4fa3158e3b1247717, type: 3}
+  - {fileID: 21300000, guid: 3c1ba40102899ee4780c12892cd0694d, type: 3}
+  - {fileID: 21300000, guid: 0a7ae2b24933c7f47bdc18bc260b4fe3, type: 3}
+  - {fileID: 21300000, guid: 2480af2c4c189814594ed51ff4c5e47d, type: 3}
+  - {fileID: 21300000, guid: 7797b163603062346b58117dc67754ae, type: 3}
+  - {fileID: 21300000, guid: c7560cba9d06363438799f6e4f5cc824, type: 3}
+  - {fileID: 21300000, guid: 70c8ba88bcb159a4e9373a19055d931d, type: 3}
+  - {fileID: 21300000, guid: cc5f45329b2052c45ae21e8d95c10f07, type: 3}
+  - {fileID: 21300000, guid: b86cdbb383e07fb4081039c4f2fc7f2e, type: 3}
+  - {fileID: 21300000, guid: a5b5acf1ebcf5e549a35d8034694890b, type: 3}
+  - {fileID: 21300000, guid: b8c254ae5304bde4face83a8d3268d62, type: 3}
+  - {fileID: 21300000, guid: e065f9a1b31da7a448118b021dd75930, type: 3}
+  - {fileID: 21300000, guid: 2790fdc436643a54ca7a07331aa5e099, type: 3}
+  - {fileID: 21300000, guid: faf58bfbd1005714890970874ce7a5a9, type: 3}
+  - {fileID: 21300000, guid: bd5208ac38c695940b60af2de1f75ae7, type: 3}
+  - {fileID: 21300000, guid: 5572b707eb2bb6c428f775025f219ed5, type: 3}
+  - {fileID: 21300000, guid: 07d16365b1bd4ac4fa1bd61f467c7f6f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - meteorBrown_big2
+  - meteorGrey_big2
+  - meteorBrown_big4
+  - meteorGrey_big4
+  - meteorBrown_big1
+  - meteorGrey_big1
+  - meteorBrown_big3
+  - meteorGrey_big3
+  - meteorGrey_med1
+  - meteorBrown_med1
+  - meteorGrey_med2
+  - meteorBrown_med3
+  - meteorGrey_small1
+  - meteorBrown_small1
+  - meteorGrey_small2
+  - meteorBrown_small2
+  - meteorBrown_tiny1
+  - meteorGrey_tiny1
+  - meteorBrown_tiny2
+  - meteorGrey_tiny2
+  m_Tag: FX Meteor
+  m_IsVariant: 0

@@ -1,0 +1,7 @@
+etc
+obj
+Library
+Release
+*.csproj
+*.sln
+.vs
