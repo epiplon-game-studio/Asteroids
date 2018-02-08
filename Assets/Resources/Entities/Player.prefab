@@ -135,10 +135,11 @@ MonoBehaviour:
   ForceMultiplier: 3
   RotationSpeed: 200
   laserKey: plaser
-  LaserForce: 5
-  Mode: 1
+  LaserForce: 40
   MaxTimer: 0.15
+  InvulnerabilityTimer: 2
   Thruster: {fileID: 198202663941808962}
+  PlayerExplosionFX: playerexplosion
   HostileLayer:
     serializedVersion: 2
     m_Bits: 3072
@@ -153,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f0be6b44adc2643a4665c2f0bfca8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OutsideAction: 0
 --- !u!198 &198202663941808962
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserKey: elaser
-  LaserForce: 10
+  LaserSpeed: 20
   MaxTimer: 0.5
+  SaucerType: 1
   Speed: 5
   HostileLayer:
     serializedVersion: 2

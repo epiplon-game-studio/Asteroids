@@ -1,7 +1,4 @@
 ﻿using Asteroids.Entities;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 namespace Asteroids.Events
 {
@@ -14,6 +11,16 @@ namespace Asteroids.Events
         {
             this.Points = points;
             this.Lives = lives;
+        }
+    }
+
+    public struct GameStateChangedEvent
+    {
+        public GameState CurrentState;
+
+        public GameStateChangedEvent(GameState gameState)
+        {
+            CurrentState = gameState;
         }
     }
 
@@ -34,6 +41,18 @@ namespace Asteroids.Events
         public SaucerDestroyedEvent(Saucer saucer)
         {
             this.saucer = saucer;
+        }
+    }
+
+    public struct PlayerHitEvent { }
+
+    public struct CreateHighscore
+    {
+        public string Name;
+
+        public CreateHighscore(string name)
+        {
+            Name = name;
         }
     }
 }

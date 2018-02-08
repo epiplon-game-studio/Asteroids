@@ -57,12 +57,18 @@ MonoBehaviour:
   - Key: big_saucer
     StartCapacity: 0
     AutoResize: 1
-    Template: {fileID: 114244902199383996, guid: 0b6000b3e0ac8f74bbb02da77001755e,
+    Template: {fileID: 114080272415155722, guid: 14c49c244e0b551489ec723079af6162,
       type: 2}
     Category: 0
   - Key: saucerhit
     StartCapacity: 1
     AutoResize: 1
     Template: {fileID: 114347000900879026, guid: 02c53a32d0d280146b0a39fa7cb354fb,
+      type: 2}
+    Category: 2
+  - Key: playerexplosion
+    StartCapacity: 0
+    AutoResize: 1
+    Template: {fileID: 114473339752600850, guid: 8480b73bdef39b34a824d326a8c86dcb,
       type: 2}
     Category: 2

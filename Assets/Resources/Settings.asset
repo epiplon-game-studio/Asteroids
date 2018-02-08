@@ -13,3 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingLives: 3
   AsteroidsPoints: 100
+  SmallSaucerPoints: 500
+  BigSaucerPoints: 250

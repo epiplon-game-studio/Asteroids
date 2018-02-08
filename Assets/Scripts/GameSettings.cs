@@ -7,4 +7,6 @@ public class GameSettings : ScriptableObject
 {
     public int StartingLives;
     public int AsteroidsPoints;
+    public int SmallSaucerPoints;
+    public int BigSaucerPoints;
 }

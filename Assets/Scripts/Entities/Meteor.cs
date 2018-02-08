@@ -6,7 +6,8 @@ using Asteroids.Events;
 namespace Asteroids.Entities
 {
     [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D))]
-    public class Meteor : MonoBehaviour
+    public class Meteor : MonoBehaviour,
+        IEventListener<GameStateChangedEvent>
     {
         SpriteRenderer spriteRenderer;
         Rigidbody2D body;
@@ -22,6 +23,7 @@ namespace Asteroids.Entities
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             body = GetComponent<Rigidbody2D>();
+            this.Listen();
 
             if (sprites.Length > 0)
             {
@@ -56,9 +58,20 @@ namespace Asteroids.Entities
             }
         }
 
+        private void OnDestroy()
+        {
+            this.Unlisten();
+        }
+
         private void Disable()
         {
             gameObject.SetActive(false);
+        }
+
+        public void OnEvent(GameStateChangedEvent e)
+        {
+            if (e.CurrentState == GameState.GameOver)
+                Disable();
         }
     }
 

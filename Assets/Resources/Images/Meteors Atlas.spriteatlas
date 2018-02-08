@@ -5,7 +5,7 @@ SpriteAtlas:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: FX Meteor
+  m_Name: Meteors Atlas
   m_EditorData:
     textureSettings:
       serializedVersion: 2
@@ -21,18 +21,18 @@ SpriteAtlas:
     platformSettings: []
     packingParameters:
       serializedVersion: 2
-      padding: 4
+      padding: 2
       blockOffset: 1
       allowAlphaSplitting: 0
-      enableRotation: 1
+      enableRotation: 0
       enableTightPacking: 1
     packedHash:
       serializedVersion: 2
-      Hash: 6029152d8eeafcb5fded08fc9e4d0d6f
+      Hash: ecd07dc145f5cc5c3c40066d255d0e45
     variantMultiplier: 1
     bindAsDefault: 1
     finalFormat: 12
-    hashString: 6029152d8eeafcb5fded08fc9e4d0d6f
+    hashString: ecd07dc145f5cc5c3c40066d255d0e45
     totalSpriteSurfaceArea: 85402
     packables:
     - {fileID: 102900000, guid: cc298163afb9ba2459ff9b8c2c8f7e62, type: 3}
@@ -100,5 +100,5 @@ SpriteAtlas:
   - meteorGrey_tiny1
   - meteorBrown_tiny2
   - meteorGrey_tiny2
-  m_Tag: FX Meteor
+  m_Tag: Meteors Atlas
   m_IsVariant: 0

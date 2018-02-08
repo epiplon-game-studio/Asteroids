@@ -12,6 +12,7 @@ namespace Asteroids.Entities
         public LayerMask HostileLayer;
         //public LayerMask EnemyLayer;
         public float Lifetime = 1f;
+        float currentLife;
 
         Rigidbody2D body;
         Vector2 direction;
@@ -26,17 +27,23 @@ namespace Asteroids.Entities
         {
             this.direction = direction;
             this.speed = speed;
-            Invoke("Disable", Lifetime);
+            currentLife = Lifetime;
         }
         
         private void FixedUpdate()
         {
             var pos2d = new Vector2(transform.position.x, transform.position.y);
             body.MovePosition(pos2d + (direction * speed * Time.fixedDeltaTime));
+            currentLife = Mathf.Clamp(currentLife - Time.fixedDeltaTime, 0, Lifetime);
+            if (currentLife <= 0)
+                Disable();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            if (collision.gameObject.CompareTag("Projectile"))
+                return;
+
             if (Utility.CompareLayer(collision.gameObject, HostileLayer))
                 Disable();
         }
@@ -45,8 +52,6 @@ namespace Asteroids.Entities
         {
             direction = Vector2.zero;
             speed = 0f;
-
-            CancelInvoke("Disable");
             gameObject.SetActive(false);
         }
     }
