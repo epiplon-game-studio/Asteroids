@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114490424689063574}
   - component: {fileID: 114850836709823462}
   - component: {fileID: 114470047286851744}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Laser _ Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303014395665140}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -112,14 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fbdbfd999a6d2643ae1506861f0b97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Category: 1
-  PlayerLayer:
+  HostileLayer:
     serializedVersion: 2
-    m_Bits: 512
-  EnemyLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  Lifetime: 0.2
+    m_Bits: 2560
+  Lifetime: 2
 --- !u!114 &114850836709823462
 MonoBehaviour:
   m_ObjectHideFlags: 1

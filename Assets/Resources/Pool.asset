@@ -15,7 +15,7 @@ MonoBehaviour:
   - Key: explosion
     StartCapacity: 3
     AutoResize: 1
-    Template: {fileID: 114411428701483332, guid: 74debb43b9aee62408436087e059d344,
+    Template: {fileID: 114328450126893390, guid: 789f46d6cc8612945b85de9e7dc6c396,
       type: 2}
     Category: 2
   - Key: plaser
@@ -30,3 +30,39 @@ MonoBehaviour:
     Template: {fileID: 114850836709823462, guid: 10b6bec4eb75cc046b8a18997c0a4513,
       type: 2}
     Category: 1
+  - Key: bmeteor
+    StartCapacity: 1
+    AutoResize: 1
+    Template: {fileID: 114874120154938768, guid: 985e3013b6e0e30468417feb17a71764,
+      type: 2}
+    Category: 0
+  - Key: mmeteor
+    StartCapacity: 1
+    AutoResize: 1
+    Template: {fileID: 114982184763472694, guid: 55ec6d7f23b23074d873143f0936cefc,
+      type: 2}
+    Category: 0
+  - Key: tmeteor
+    StartCapacity: 1
+    AutoResize: 1
+    Template: {fileID: 114244902199383996, guid: 0b6000b3e0ac8f74bbb02da77001755e,
+      type: 2}
+    Category: 0
+  - Key: small_saucer
+    StartCapacity: 0
+    AutoResize: 1
+    Template: {fileID: 114681464499335308, guid: 0c960485366c67e4ca900113f62637e6,
+      type: 2}
+    Category: 0
+  - Key: big_saucer
+    StartCapacity: 0
+    AutoResize: 1
+    Template: {fileID: 114244902199383996, guid: 0b6000b3e0ac8f74bbb02da77001755e,
+      type: 2}
+    Category: 0
+  - Key: saucerhit
+    StartCapacity: 1
+    AutoResize: 1
+    Template: {fileID: 114347000900879026, guid: 02c53a32d0d280146b0a39fa7cb354fb,
+      type: 2}
+    Category: 2

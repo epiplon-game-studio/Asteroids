@@ -8,42 +8,45 @@ namespace Asteroids.Entities
     [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
     public class Projectile : MonoBehaviour
     {
-        public ProjectileCategory Category;
-        public LayerMask PlayerLayer;
-        public LayerMask EnemyLayer;
+        //public ProjectileCategory Category;
+        public LayerMask HostileLayer;
+        //public LayerMask EnemyLayer;
         public float Lifetime = 1f;
 
         Rigidbody2D body;
+        Vector2 direction;
+        float speed;
 
         private void Awake()
         {
             body = GetComponent<Rigidbody2D>();
         }
 
-        public void Shoot(Vector2 direction, float force, ForceMode2D mode)
+        public void Shoot(Vector2 direction, float speed)
         {
-            body.AddForce(direction * force, mode);
+            this.direction = direction;
+            this.speed = speed;
             Invoke("Disable", Lifetime);
+        }
+        
+        private void FixedUpdate()
+        {
+            var pos2d = new Vector2(transform.position.x, transform.position.y);
+            body.MovePosition(pos2d + (direction * speed * Time.fixedDeltaTime));
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            switch (Category)
-            {
-                case ProjectileCategory.Friendly:
-                    if(Utility.CompareLayer(collision.gameObject, EnemyLayer))
-                        gameObject.SetActive(false);
-                    break;
-                case ProjectileCategory.Hostile:
-                    if (Utility.CompareLayer(collision.gameObject, PlayerLayer))
-                        gameObject.SetActive(false);
-                    break;
-            }
+            if (Utility.CompareLayer(collision.gameObject, HostileLayer))
+                Disable();
         }
 
         private void Disable()
         {
-            body.velocity = Vector2.zero;
+            direction = Vector2.zero;
+            speed = 0f;
+
+            CancelInvoke("Disable");
             gameObject.SetActive(false);
         }
     }
