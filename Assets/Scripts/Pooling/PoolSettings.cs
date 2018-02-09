@@ -21,8 +21,5 @@ namespace Asteroids.Pooling
         public int StartCapacity;
         public bool AutoResize;
         public PooledObject Template;
-        public PoolCategory Category;
     }
-
-    public enum PoolCategory { Enemy, Projectile, Particle }
 }

@@ -16,7 +16,7 @@ namespace Asteroids.Pooling
             PoolSettings settings = Resources.Load<PoolSettings>("Pool");
             foreach (var reg in settings.RegistryList)
             {
-                var newEntry = new PoolEntry(reg.Template, reg.Category, reg.AutoResize);
+                var newEntry = new PoolEntry(reg.Template, reg.AutoResize);
                 _entries.Add(reg.Key, newEntry);
 
                 for (int i = 0; i < reg.StartCapacity; i++)
@@ -88,14 +88,12 @@ namespace Asteroids.Pooling
     public struct PoolEntry
     {
         public PooledObject Template;
-        public PoolCategory Category;
         public bool AutoResize;
         public Stack<PooledObject> RuntimeInstances;
 
-        public PoolEntry(PooledObject entry, PoolCategory category, bool autoResize)
+        public PoolEntry(PooledObject entry, bool autoResize)
         {
             Template = entry;
-            Category = category;
             AutoResize = autoResize;
             RuntimeInstances = new Stack<PooledObject>();
         }

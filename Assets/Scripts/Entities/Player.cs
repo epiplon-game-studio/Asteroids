@@ -22,6 +22,7 @@ namespace Asteroids.Entities
 
         [Header("Laser"), Space]
         public string laserKey;         // pooling key
+        public string laserSfxKey;      // pooling laser sound
         public float LaserForce = 4;
         public float MaxTimer = 2f;
         float laserCountdown;           // delay between shots
@@ -68,9 +69,14 @@ namespace Asteroids.Entities
             if (CPInputManager.Instance.GetButton("Fire")
                 && (laserCountdown <= 0))
             {
+                // shoot laser
                 var p = PoolManager.Get<Projectile>(laserKey);
                 p.transform.position = transform.position;
                 p.Shoot(transform.up, LaserForce);
+
+                // play laser sound
+                var sfx = PoolManager.Get<SFX>(laserSfxKey);
+                sfx.Play();
 
                 laserCountdown = MaxTimer;
             }
@@ -79,6 +85,7 @@ namespace Asteroids.Entities
             if (isAddingForce)
                 Thruster.Emit(1);
 
+            // blink when invulnerable
             if (invulnerable > 0)
             {
                 var a = spriteRenderer.color.a * 100;
@@ -111,11 +118,12 @@ namespace Asteroids.Entities
                 HitPlayer();
         }
 
+        /// <summary> Player was hit by saucers, lasers or meteors </summary>
         private void HitPlayer()
         {
             body.velocity = Vector2.zero;
 
-            if (invulnerable <= 0)
+            if (invulnerable <= 0)  // if off invulnerability
             {
                 invulnerable = InvulnerabilityTimer;
                 EventManager.Trigger(new PlayerHitEvent());

@@ -135,6 +135,7 @@ MonoBehaviour:
   ForceMultiplier: 3
   RotationSpeed: 200
   laserKey: plaser
+  laserSfxKey: lasersfx
   LaserForce: 40
   MaxTimer: 0.15
   InvulnerabilityTimer: 2

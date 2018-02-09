@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace Asteroids.Entities
 {
-    [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
+    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(BoxCollider2D))]
     public class Projectile : MonoBehaviour
     {
-        //public ProjectileCategory Category;
+        [Header("Options")]
         public LayerMask HostileLayer;
-        //public LayerMask EnemyLayer;
         public float Lifetime = 1f;
         float currentLife;
 
