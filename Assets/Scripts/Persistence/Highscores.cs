@@ -24,6 +24,7 @@ public class Highscores
     /// <param name="points">Achieved points</param>
     public void New(string name, int points)
     {
+        name = string.IsNullOrEmpty(name) ? "Anonymous" : name;
         var newEntry = new HighscoreEntry(name, points);
         for (int i = 0; i < Entries.Length; i++)
         {

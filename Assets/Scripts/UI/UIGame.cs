@@ -93,6 +93,7 @@ namespace Asteroids.UI
                     break;
                 case GameState.GameOver:
                     gameOverGroup.Show();
+                    highscoreInput.Select();
                     break;
                 case GameState.Paused:
                     menuGroup.Show();

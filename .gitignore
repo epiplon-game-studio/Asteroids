@@ -1,5 +1,6 @@
 etc
 obj
+Temp
 Library
 Release
 *.csproj

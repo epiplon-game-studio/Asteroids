@@ -602,10 +602,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 80
-    m_Right: 80
-    m_Top: 50
-    m_Bottom: 50
+    m_Left: 120
+    m_Right: 120
+    m_Top: 20
+    m_Bottom: 20
   m_ChildAlignment: 4
   m_Spacing: 20
   m_ChildForceExpandWidth: 1
@@ -745,7 +745,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ENTER YOUR NAME _
+  m_Text: CLICK TO ENTER YOUR NAME
 --- !u!114 &114266290067533254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2057,7 +2057,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1716189161978856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.5, z: 0}
+  m_LocalPosition: {x: 0, y: -13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224323291107284686}
@@ -2067,7 +2067,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchorMax: {x: 1, y: 0.55}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2096,7 +2096,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1385320520196034}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -2118,7 +2118,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1462331565030664}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

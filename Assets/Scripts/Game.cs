@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace Asteroids
 {
+    /// <summary>
+    /// Main game logic
+    /// </summary>
     public class Game : IDisposable,
         IEventListener<MeteorDestroyedEvent>,
         IEventListener<SaucerDestroyedEvent>,
@@ -21,10 +24,12 @@ namespace Asteroids
         public Highscores Highscores { get; private set; }
         public GameState CurrentState { get { return currentState; } }
         private GameState currentState = GameState.NotStarted;
+        private int bonusLifePoints;
 
         public Game(int lives)
         {
             Points = 0;
+            bonusLifePoints = 0;
             Lives = lives;
 
             this.Listen<MeteorDestroyedEvent>();
@@ -49,6 +54,17 @@ namespace Asteroids
             EventManager.Trigger(new GameStateChangedEvent(GameState.NotStarted));
             EventManager.Trigger(new GameEvent(current.Points, current.Lives));
         }
+
+        public void AddPoints(int points)
+        {
+            Points += points;
+            bonusLifePoints += points;
+            if (bonusLifePoints >= 10000)
+            {
+                Lives++;
+                bonusLifePoints -= 10000;
+            }
+        }
         
         public void Dispose()
         {
@@ -61,8 +77,7 @@ namespace Asteroids
 
         public void OnEvent(MeteorDestroyedEvent e)
         {
-            Points += settings.AsteroidsPoints * (int) e.meteor.Category;
-
+            AddPoints(settings.AsteroidsPoints * (int)e.meteor.Category);
             EventManager.Trigger(new GameEvent(Points, Lives));
         }
         
@@ -71,12 +86,13 @@ namespace Asteroids
             switch (e.saucer.SaucerType)
             {
                 case SaucerType.Big:
-                    Points += settings.BigSaucerPoints;
+                    AddPoints(settings.BigSaucerPoints);
                     break;
                 case SaucerType.Small:
-                    Points += settings.SmallSaucerPoints;
+                    AddPoints(settings.SmallSaucerPoints);
                     break;
             }
+            EventManager.Trigger(new GameEvent(Points, Lives));
         }
 
         public void OnEvent(GameStateChangedEvent e)
@@ -87,6 +103,7 @@ namespace Asteroids
                 case GameState.NotStarted:
                     Lives = settings.StartingLives;
                     Points = 0;
+                    bonusLifePoints = 0;
                     Time.timeScale = 1;
                     EventManager.Trigger(new GameEvent(current.Points, current.Lives));
                     break;

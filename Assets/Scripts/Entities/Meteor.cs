@@ -70,7 +70,7 @@ namespace Asteroids.Entities
 
         public void OnEvent(GameStateChangedEvent e)
         {
-            if (e.CurrentState == GameState.GameOver)
+            if (e.CurrentState == GameState.Highscores)
                 Disable();
         }
     }

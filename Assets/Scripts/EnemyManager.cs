@@ -206,6 +206,7 @@ namespace Asteroids
             if (e.CurrentState == GameState.GameOver)
             {
                 StopAllCoroutines();
+                meteorsCount = startingMeteors;
             }
         }
 
