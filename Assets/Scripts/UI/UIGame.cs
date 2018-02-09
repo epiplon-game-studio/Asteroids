@@ -55,8 +55,15 @@ namespace Asteroids.UI
                 EventManager.Trigger(new GameStateChangedEvent(GameState.NotStarted));
             });
 
-            quitButton.onClick.AddListener(() => Application.Quit());
-
+            if (Application.platform == RuntimePlatform.WebGLPlayer)
+            {
+                quitButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                quitButton.onClick.AddListener(() => Application.Quit());
+            }
+            
             for (int i = 0; i < Game.current.Highscores.Entries.Length; i++)
                 Instantiate(highscoreTemplate, highscoreContent, worldPositionStays: false);
         }
