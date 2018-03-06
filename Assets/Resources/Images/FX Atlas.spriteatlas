@@ -28,6 +28,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
     packingParameters:
       serializedVersion: 2
       padding: 2
@@ -35,44 +36,10 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
-    packedHash:
-      serializedVersion: 2
-      Hash: 7753451aed65079bdaf74e1096d012c0
     variantMultiplier: 1
-    bindAsDefault: 1
-    finalFormat: 4
-    hashString: 7753451aed65079bdaf74e1096d012c0
-    totalSpriteSurfaceArea: 63701
     packables:
     - {fileID: 102900000, guid: ed8cee1549fe0304e9397c873a85adf1, type: 3}
-    packedSpriteRenderDataKeys:
-    - 107eac81d45b8f3498b24177d58a8f93: 21300000
-    - 35a9b5dc109bc8144ac643ed46753ff5: 21300000
-    - 3d61ef12d3e7d36418bbf51ac4bb3e2e: 21300000
-    - b686015d6ee5f7047b39e7e42e5c8850: 21300000
-    - fcd063bdc1bea004db6a51fa0be107c3: 21300000
-    - 7b80c03f3f044d34bb738be54c292f52: 21300000
-    - e0a44c443a2244c4a9ebf0dc3800fa22: 21300000
-    - 56d0a6975e6999c4ab92c88361c43cd3: 21300000
-    - 31b89e9e50ada8a40940395bcde492d2: 21300000
-    - 9cbe81b1358661749bb90e8ac0735ba5: 21300000
-    - 64d5b64e9a37dd245b4310777d5c78a8: 21300000
-    - f7a011a8026f0df4ab94fa340e8eb3d9: 21300000
-    - 52e8dee1af09d95458ba9d0235ed674b: 21300000
-    - 1987e46d86464854bbda59d52ed7aa60: 21300000
-    - c21312d7a13730e4aa2666c563d641b4: 21300000
-    - 4a2cda4ee11e9364f99f142222efbc2a: 21300000
-    - ff0d46be5347b434a8f555204992b6f6: 21300000
-    - f1c1c81e6033d174cada6c050482ab79: 21300000
-    - 054699e5cf21a274d9210f71aa4a73b7: 21300000
-    - aaa3e114fcb81f241a5425733461de77: 21300000
-    - b20218580d4835945896749119f9e53d: 21300000
-    - 500a6a41823b90b49b9bd0310c93dcfc: 21300000
-    - 8c5608fbc2301774e8d0ee35078d7c22: 21300000
-    - e4f78c1a02eb9394096c55c241227282: 21300000
-    - ac9cb9d0ee222d64f98dfcd64f890820: 21300000
-    - 3364c1189fb159249af7ceabeebb941e: 21300000
-    - 9a52416527b6f704fa6a9fbb0db5ec8c: 21300000
+    bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 107eac81d45b8f3498b24177d58a8f93, type: 3}
